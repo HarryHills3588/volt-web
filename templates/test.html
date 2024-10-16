@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <link rel="icon" sizes="48x48" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
+
+        <title>VOLT - Volatility Newsletter</title>
+  </head>
+  <body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="" class="navbar-item">
+                <img src="{{ url_for('static', filename='images/line_logo_black.png') }}" alt="Logo" />
+            </a>
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+                <p class="navbar-item is-expanded">
+                    About Us
+                </p>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="columns">
+            <div class="column">
+                <h1>
+                    The VOLT - Volatility Financial Newsletter
+                </h1>
+                <p>
+                    VOLT is a weekly financial newsletter designed for active participants in the stock market, 
+                    delivering timely insights on market volatility and risk. Each week, we dive into the current 
+                    state of market risk, highlighting key events, economic data, and trends that could impact volatility. 
+                    Our goal is to equip traders and investors with the critical information they need to navigate potential shifts 
+                    in the market, stay ahead of risks, and seize opportunities.<br><br>
+
+                    With a focus on volatility, VOLT offers a clear and concise analysis of the forces that drive market fluctuations, 
+                    empowering you to make informed decisions in real-time.
+                </p>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="card-content has-text-centered">
+                        <h1>
+                            Subscribe
+                        </h1>
+                        <p>
+                            The Financial Newsletter <br>
+                            Focused on Volatility and Risk
+                        </p>
+                        <form action="/submit" method="post">
+                            <input type="email" name="email" id="email" placeholder="Email" required>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
+  </body>
+</html>
