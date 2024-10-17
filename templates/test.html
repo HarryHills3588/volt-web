@@ -19,6 +19,18 @@
                 --bulma-body-color: #181818;
                 --bulma-scheme-main: #F2F2F2;
 
+                --bulma-primary-h: 211deg;
+                --bulma-primary-s: 44%;
+                --bulma-primary-l: 49%;
+
+                --bulma-primary-00-h: 0deg;
+                --bulma-primary-00-s: 0%;
+                --bulma-primary-00-l: 20%;
+
+                --bulma-scheme-h: 0deg;
+                --bulma-scheme-s: 0%;
+                --bulma-border-l: 20%;
+
                 .navbar-item {
                     color: #181818;
                 }
@@ -34,12 +46,6 @@
 
                 .button {
                     border-color: #323232;
-                    color: #F2F2F2;
-                    background-color:#323232;
-                }
-
-                .card {
-                    --bulma-card-background-color: #467CB5;
                 }
             }
         </style>
@@ -84,8 +90,8 @@
             </div>
             <div class="column"></div>
             <div class="column is-one-third">
-                <div class="card has-text-white	">
-                    <div class="card-content has-text-centered">
+                <div class="card has-background-primary">
+                    <div class="card-content has-text-white has-text-centered">
                         <h1 class="block has-text-weight-semibold pr-4">
                             Subscribe
                         </h1>
@@ -100,7 +106,7 @@
                                     <input class="input is-small" name="email" id="email" type="input" placeholder="Email" required>
                                 </p>
                                 <p class="control">
-                                    <input type="submit" value="Submit" class="button is-small">
+                                    <input type="submit" value="Submit" class="button is-small has-background-primary-00 has-text-white">
                                 </p>
                             </form>
                             {% with messages = get_flashed_messages() %}
