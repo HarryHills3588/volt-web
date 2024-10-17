@@ -103,6 +103,13 @@
                                     <input type="submit" value="Submit" class="button is-small">
                                 </p>
                             </form>
+                            {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <p class="is-family-secondary">{{ message }}</p>
+                                {% endfor %}
+                            {% endif %}
+                            {% endwith %}
                         </div>
                     </div>
                 </div>
