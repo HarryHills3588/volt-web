@@ -1,128 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-    <link rel="icon" sizes="48x48" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
-    <style>
-        body {
-            background-color: #1D1D1D;
-            color: white; /* Ensure text is visible on dark background */
-            font-family: 'Merriweather', serif; /* Use Merriweather font */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+<html>
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+        <link rel="icon" sizes="48x48" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-        h3 {
-            font-family: 'Merriweather', serif;
-            font-size: 1.8em;
-            margin-bottom: 1.5em;
-        }
+        <style>
+            :root {
+                --bulma-family-primary: 'Poppins';
+                --bulma-family-secondary: 'Open Sans';
 
-        #container {
-            width: 50%;
-            text-align: center;
-            padding: 20px;
-        }
+                --bulma-body-color: #181818;
+                --bulma-scheme-main: #F2F2F2;
 
-        header img {
-            height: 10em;
-            width: auto;
-            display: block;
-            margin: 0 auto;
-            padding-top: 2%;
-        }
+                --bulma-primary-h: 211deg;
+                --bulma-primary-s: 44%;
+                --bulma-primary-l: 49%;
 
-        form {
-            width: 100%; /* Form takes full width of container */
-            max-width: 400px; /* Set a max width for the form */
-            margin: 0 auto;
-        }
+                --bulma-primary-00-h: 0deg;
+                --bulma-primary-00-s: 0%;
+                --bulma-primary-00-l: 20%;
 
-        input[type="email"] {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1em;
-            color: #333;
-            background-color: #f4f4f4;
-        }
+                --bulma-scheme-h: 0deg;
+                --bulma-scheme-s: 0%;
+                --bulma-border-l: 20%;
 
-        input[type="submit"] {
-            width: 100%;
-            padding: 15px;
-            font-size: 1.2em;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin-top: 20px;
-        }
-
-        li {
-            color: #ff0000;
-        }
-
-        /* Responsive design for smaller screens */
-        @media (max-width: 768px) {
-            #container {
-                width: 80%;
+                --bulma-text-h: 0deg;
+                --bulma-text-s: 0%;
+                --bulma-text-strong-l: 10%;
             }
+        </style>
 
-            form {
-                max-width: 100%;
-            }
-        }
-    </style>
-    <title>VOLT - Volatility Newsletter</title>
-</head>
-<body>
+        <title>VOLT - Volatility Newsletter</title>
+  </head>
+  <body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="" class="navbar-item ml-4 pt-2">
+                <img src="{{ url_for('static', filename='images/line_logo_black.png') }}" alt="Logo" />
+            </a>
+            <a class="navbar-burger" id="burger">
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="navbar-menu" id="nav-links">
+            <div class="navbar-end">
+                <p class="navbar-item block p-4 mr-4 has-text-weight-semibold has-text-dark">
+                    About Us
+                </p>
+            </div>
+        </div>
+    </nav>
+    <section class="section is-medium">
+        <div class="columns is-vcentered is-centered">
+            <div class="column is-half has-text-centered">
+                <h1 class="block">
+                    The VOLT - Volatility Financial Newsletter
+                </h1>
+                <p class="is-family-primary">
+                    VOLT is a weekly financial newsletter designed for active participants in the stock market, 
+                    delivering timely insights on market volatility and risk. Each week, we dive into the current 
+                    state of market risk, highlighting key events, economic data, and trends that could impact volatility. 
+                    Our goal is to equip traders and investors with the critical information they need to navigate potential shifts 
+                    in the market, stay ahead of risks, and seize opportunities.<br><br>
 
-  <header>
-    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" />
-  </header>
-
-  <div id="container">
-    <h3>
-      The Financial Newsletter <br>
-      Focused on Volatility and Risk
-    </h3>
-
-    <form action="/submit" method="post">
-        <input type="email" placeholder="Enter your email" id="email" name="email" required>
-        <input type="submit" value="Submit">
-    </form>
-
-    {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            <ul>
-                {% for message in messages %}
-                    <li>{{ message }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    {% endwith %}
-  </div>
-</body>
+                    With a focus on volatility, VOLT offers a clear and concise analysis of the forces that drive market fluctuations, 
+                    empowering you to make informed decisions in real-time.
+                </p>
+            </div>
+            <div class="column"></div>
+            <div class="column is-one-third">
+                <div class="card has-background-primary">
+                    <div class="card-content has-text-white has-text-centered">
+                        <h1 class="block has-text-weight-semibold pr-4">
+                            Subscribe
+                        </h1>
+                        <p class="is-family-secondary is-size-6">
+                            The Financial Newsletter <br>
+                            Focused on Volatility and Risk <br>
+                            Every Sunday
+                        </p>
+                        <div class="block">
+                            <form class="field is-grouped is-grouped-centered p-3"action="/submit" method="post">
+                                <p class="control">
+                                    <input class="input is-small has-background-primary-90" name="email" id="email" type="input" placeholder="Email" required>
+                                </p>
+                                <p class="control">
+                                    <input type="submit" value="Submit" class="button is-small has-background-primary-00 has-text-white">
+                                </p>
+                            </form>
+                            {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <p class="is-family-secondary is-size-7">{{ message }}</p>
+                                {% endfor %}
+                            {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="column"></div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='javascript/index.js') }}"></script>
+  </body>
 </html>

@@ -18,7 +18,7 @@ supabase = create_client(supaURL,supaKey)
 # Routes
 @app.route('/')
 def index():
-    return render_template('test.html')
+    return render_template('index.html')
 
 @app.route('/submit', methods=['POST'])
 def submit():
