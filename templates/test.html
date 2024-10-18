@@ -31,22 +31,9 @@
                 --bulma-scheme-s: 0%;
                 --bulma-border-l: 20%;
 
-                .navbar-item {
-                    color: #181818;
-                }
-
-                .input {
-                    border-color: #F2F2F2;
-                    background-color: #F2F2F2;
-                }
-
-                .input::placeholder {
-                    color: #323232;
-                }
-
-                .button {
-                    border-color: #323232;
-                }
+                --bulma-text-h: 0deg;
+                --bulma-text-s: 0%;
+                --bulma-text-strong-l: 10%;
             }
         </style>
 
@@ -65,7 +52,7 @@
         </div>
         <div class="navbar-menu" id="nav-links">
             <div class="navbar-end">
-                <p class="navbar-item block p-4 mr-4 has-text-weight-semibold">
+                <p class="navbar-item block p-4 mr-4 has-text-weight-semibold has-text-dark">
                     About Us
                 </p>
             </div>
@@ -103,7 +90,7 @@
                         <div class="block">
                             <form class="field is-grouped is-grouped-centered p-3"action="/submit" method="post">
                                 <p class="control">
-                                    <input class="input is-small" name="email" id="email" type="input" placeholder="Email" required>
+                                    <input class="input is-small has-background-primary-90" name="email" id="email" type="input" placeholder="Email" required>
                                 </p>
                                 <p class="control">
                                     <input type="submit" value="Submit" class="button is-small has-background-primary-00 has-text-white">
