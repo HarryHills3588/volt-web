@@ -95,5 +95,16 @@ def submit():
     
     return redirect(url_for('index'))
 
+@app.route('/unsubscribe')
+def unsub():
+    return render_template('unsubscribe.html')
+
+@app.route('/unsubscribe/execute', methods=['POST'])
+def unsubscribe():
+    email = request.form['email']
+    
+    supabase.table('emails').delete().eq("email",email).execute()
+    return redirect('/unsubscribe')
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
